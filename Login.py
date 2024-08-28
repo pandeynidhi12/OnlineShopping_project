@@ -10,9 +10,9 @@ top.title('welcome')
 def Login():
 
     import pymysql as sql
-    db=sql.connect(host='localhost',user='root',password='arunidhi',db='project')
+    db=sql.connect(host='localhost',user='root',password='india123',db='project')
     cur=db.cursor()
-    cur.execute("select*from emp where Name=%s and where Lastname=%s", (E1.get(), E2.get()))
+    cur.execute("select*from emp where Name=%s and Lastname=%s", (E1.get(), E2.get()))
     row=cur.fetchone()
 
     if row == None:
@@ -28,10 +28,10 @@ def Exit():
 
 p=StringVar()    
 
-path="C:/Users/Administrator/Desktop/LIGHT.png"
-img=ImageTk.PhotoImage(Image.open(path))
-L2=Label(top,image=img)
-L2.pack()
+# path="C:/Users/Administrator/Desktop/LIGHT.png"
+# img=ImageTk.PhotoImage(Image.open(path))
+# L2=Label(top,image=img)
+# L2.pack()
 
 
 L=Label(top,text='Login Page',bg='white',fg='black',font=('Arial 25 bold'))
